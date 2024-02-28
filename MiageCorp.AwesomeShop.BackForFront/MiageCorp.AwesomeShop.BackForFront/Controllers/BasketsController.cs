@@ -33,10 +33,10 @@ namespace MiageCorp.AwesomeShop.BackForFront.Controllers
                 await BasketService.AddToBasket(userId, item);
                 return Ok();
             }
-            catch (BackForFrontException ex) 
+            catch (BackForFrontException ex)
             {
                 return StatusCode((int)ex.StatusCode, ex.Message);
-            }        
+            }
         }
 
         // DELETE api/<BasketsController>/5

@@ -28,7 +28,7 @@ namespace MiageCorp.AwesomeShop.BasketApi.Services
 
             }
             var basketItem = basket.Items.SingleOrDefault(i => i.ProductId == item.ProductId);
-            if(basketItem == null)
+            if (basketItem == null)
             {
                 item.Quantity++;
                 basket.Items.Add(item);

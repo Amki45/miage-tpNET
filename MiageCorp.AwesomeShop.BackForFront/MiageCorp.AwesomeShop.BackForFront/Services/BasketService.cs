@@ -30,7 +30,7 @@ namespace MiageCorp.AwesomeShop.BackForFront.Services
         {
             RestRequest request = new RestRequest($"{ressourcePath}/{userId}");
             var response = await client.DeleteAsync(request);
-            if(!response.IsSuccessful)
+            if (!response.IsSuccessful)
             {
                 throw new BackForFrontException(response.StatusCode, response.ErrorMessage);
             }
